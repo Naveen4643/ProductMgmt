@@ -1,0 +1,79 @@
+<!-- <body> -->
+    <!-- <div class="col-sm-3"><button class="btn btn-secondary" (click)="addProduct()">Add Product</button></div>
+<h1>Product Table</h1>
+
+   
+    <div class="mainpage">
+            
+            <div class="container">
+                <div class="row">
+                   
+                        <div class="col-md-3" *ngFor="let pro of products">
+                        <div class="card" style="margin:20px 0px 20px 0px">
+                            <img src="{{pro.imageUrl}}" width="400px" height="200px" class="card-img-top" style="height:250px">
+                            <div class="card-body">
+                            <h5 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch">{{pro.name}}</h5>
+                            <p style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch">{{pro.description}}</p>
+                            <p><strong>Price:</strong>{{pro.unitPrice}}</p>
+                            
+                         </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>  -->
+
+        <!-- <body>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3" *ngFor="let list of products">
+                     <a href="#"> <img src={{list.imageUrl}}  width="400px" height="200px"></a>
+                      <div class="price"><br>
+                        <b>{{list.name}}</b>
+                        <p>{{list.unitPrice}}</p>
+                      </div>
+                </div>
+              </div>
+            </div>
+            
+            </body>
+         -->
+
+
+         <body>
+            <table>
+                <tr>
+                    <td>Id</td>
+                    <td>Product_Name</td>
+                    <td>sku</td>
+                    <td>Description</td>
+                    <td>Unit_Price</td>
+                    <td>Image Url</td>
+                    <td>Active</td>
+                    <td>Units_In_Stcok</td>
+                    <td>Created_date</td>
+                    <td>Last_Updated</td>
+                    <td>Category Id</td>
+                    
+                </tr>
+            
+                <tr *ngFor="let pro of products">
+                    <td>{{pro.id}}</td>
+                    <td>{{pro.name}}</td>
+                    <td>{{pro.sku}}</td>
+                    <td>{{pro.description}}</td>
+                    <td>{{pro.unitPrice}}</td>
+                    <td><img src={{pro.imageUrl}} width="80px" height="90px"/></td>
+                    <td>{{pro.active}}</td>
+                    <td>{{pro.unitsInStock}}</td>
+                    <td>{{pro.dateCreated}}</td>
+                    <td>{{pro.lastUpdated}}</td>
+                    <td>{{pro.categoryId}}</td>
+            
+            
+                </tr> 
+            
+                </table> 
+            </body> 
+            
